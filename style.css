@@ -101,7 +101,7 @@ header {
 .content_bar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background-color: black;
   width: 70%;
   height: 300px;
@@ -125,7 +125,7 @@ header {
   border-radius: 15px;
   opacity: 0;
   animation: rotate 5s linear infinite;
-  filter: blur(10px);
+  filter: blur(15px);
 }
 
 /* box-shadow */
@@ -208,6 +208,15 @@ header {
   height: 100%;
 }
 
+@keyframes float-anim {
+  0% {
+    transform: translate(0, 25px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+
 .content_bar:hover .inner_title img {
   transition: 0.5s;
   filter: brightness(0.5);
@@ -216,6 +225,8 @@ header {
 .content_bar:hover .inner_title h1 {
   transition: 0.5s;
   opacity: 1;
+  animation: float-anim 1s ease-in-out infinite;
+  animation-iteration-count: 1;
 }
 
 .content_bar:hover::after {

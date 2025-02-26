@@ -35,7 +35,7 @@ header {
   display: table-cell;
   vertical-align: middle;
   font-size: 40px;
-  font-family: Arial;
+  font-family: Arial, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: bold;
   color: white;
 }
@@ -59,7 +59,7 @@ header {
   vertical-align: middle;
   height: 100%;
   color: white;
-  font-family: Arial;
+  font-family: Arial, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 16px;
 }
 
@@ -163,8 +163,8 @@ header {
 .inner_title h1 {
   text-align: center;
   width: 100%;
+  font-family: Arial, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: white;
-  font-family: Arial;
   z-index: 2;
   position: absolute;
   font-size: 52px;
@@ -177,14 +177,14 @@ header {
   padding-right: 10%;
   color: white;
   text-align: center;
-  font-family: Arial;
+  font-family: system-ui, Arial, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 20px;
 }
 
 .inner_description h1 {
-  color: white;
   text-align: center;
-  font-family: Arial;
+  font-family: Arial, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
   font-size: 40px;
   font-weight: bold;
   margin-bottom: 10px;

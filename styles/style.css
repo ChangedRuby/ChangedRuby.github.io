@@ -208,6 +208,10 @@ header {
   height: 100%;
 }
 
+.reverse .inner_title img {
+  border-radius: 15px 0px 0px 15px;
+}
+
 @keyframes float-anim {
   0% {
     transform: translate(0, 25px);

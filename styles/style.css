@@ -17,11 +17,19 @@ header {
   height: 100px;
 }
 
+.mobile_header {
+  display: none;
+}
+
 .inner_header {
   width: 75%;
   height: 100%;
   display: block;
   margin: 0 auto;
+}
+
+.close_sidebar_container {
+  display: none;
 }
 
 .name_container {
@@ -260,18 +268,18 @@ header {
   }
 
   /* Changes the header to the left */
-  header {
+  .normal_header {
     width: 100px;
     height: 100%;
     position: fixed;
     top: 0;
     left: 0;
     vertical-align: middle;
-    z-index: 3;
+    z-index: 4;
     display: none;
   }
 
-  header::before {
+  .normal_header::before {
     content: "";
     width: 100%;
     height: 100%;
@@ -285,12 +293,34 @@ header {
     height: 100%;
   }
 
-  .name_container {
+  .close_sidebar_container {
     width: 100%;
     height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .close_sidebar_container button {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    border: none;
+    color: white;
+  }
+
+  .close_sidebar_container img {
+    width: 30%;
+    object-fit: contain;
+  }
+
+  .normal_header .name_container {
+    width: 100%;
+    height: 100px;
+    display: none;
   }
   
-  .name_container h1 {
+  .normal_header h1 {
     font-size: 20px;
     text-align: center;
   }
@@ -315,9 +345,63 @@ header {
   #linkedin img {
     width: 30px;
   }
+  
+  /* Backup header that appears on top of screen */
+  .mobile_header {
+    display: block;
+    justify-content: left;
+    position: fixed;
+    background-color: black;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 3;
+  }
+
+  .mobile_header h1 {
+    width: auto;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+  .mobile_header .inner_header {
+    width: 100%;
+    display: block;
+  }
+
+  .mobile_header .name_container {
+    width: 80%;
+    height: 100%;
+    float: right;
+  }
+  
+  .tab_toggle {
+    float: left;
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tab_toggle button {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tab_toggle img {
+    width: 50%;
+    object-fit: contain;
+  }
 
   .projects {
-    
+    margin-top: 150px;
   }
 }
 

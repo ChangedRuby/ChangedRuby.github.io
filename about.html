@@ -8,10 +8,14 @@
     <link rel="stylesheet" href="styles/about.css"></link>
 </head>
 <body style="background-color: rgb(25, 129, 95);">
-    <header>
+    <header class="normal_header" id="sidebar">
         <div class="inner_header">
             <div class="name_container">
                 <h1 class="title">Hello, I'm [NAME]</h1>
+            </div>
+
+            <div class="close_sidebar_container">
+                <button onclick="sidebarClose()"><img src="images/close-icon.png"></button>
             </div>
 
             <ul class="navigation">
@@ -22,6 +26,18 @@
             </ul>
         </div>
     </header>
+
+    <header class="mobile_header">
+        <div class="inner_header">
+            <div class="name_container">
+                <h1 class="title">Hello, I'm [NAME]</h1>
+            </div>
+
+            <div class="tab_toggle">
+                <button onclick="sidebarOpen()"><img src="images/sidebar-icon.png" id="sidebar-icon"></button>
+            </div>
+        </div>
+    </header>
     
     <div class="about">
         <div class="inner_about">
@@ -29,5 +45,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, natus dignissimos laboriosam deserunt debitis quae aliquam ab fugiat similique voluptate eaque, enim dolores suscipit ad! Deserunt, id? Tempore, ad libero.</p>
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

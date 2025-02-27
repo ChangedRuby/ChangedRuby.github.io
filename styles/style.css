@@ -221,6 +221,12 @@ header {
   }
 }
 
+@media (max-width: 700px) {
+  .content_bar {
+    flex-direction: column;
+  }
+}
+
 .content_bar:hover .inner_title img {
   transition: 0.5s;
   filter: brightness(0.5);

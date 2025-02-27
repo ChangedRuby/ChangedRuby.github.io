@@ -104,7 +104,7 @@ header {
   justify-content: center;
   background-color: black;
   width: 70%;
-  height: 300px;
+  height: auto;
   margin: 50px 0px;
   border-radius: 15px;
   cursor: pointer;
@@ -205,7 +205,7 @@ header {
   align-items: center;
   position: relative;
   width: 40%;
-  height: 100%;
+  height: 300px;
 }
 
 .reverse .inner_title img {
@@ -221,9 +221,42 @@ header {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .content_bar {
     flex-direction: column;
+  }
+
+  .inner_description p {
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+  
+  .inner_title img {
+    border-radius: 0px 0px 15px 15px;
+  }
+
+  .inner_description {
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .inner_title {
+    width: 100%;
+    height: 250px;
+  }
+
+  .inner_description {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .reverse .inner_title {
+    margin-top: 0px;
+  }
+
+  .reverse .inner_title img {
+    border-radius: 15px 15px 0px 0px;
   }
 }
 

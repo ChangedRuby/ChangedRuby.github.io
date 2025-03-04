@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gustavo's Webfolio</title>
-    <link rel="stylesheet" href="styles/style.css"></link>
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body style="background-color: rgb(25, 129, 95);">
+    <canvas id="bg"></canvas>
+
     <header class="normal_header" id="sidebar">
         <div class="inner_header">
             <div class="name_container">
@@ -38,6 +40,13 @@
             </div>
         </div>
     </header>
+
+    <div class="projects-header">
+        
+        <div id="canvas-container">
+            
+        </div>
+    </div>
 
     <div class="projects">
         <a href="https://github.com/ChangedRuby/Java_Minesweeper_project" target="_blank" class="content_bar">
@@ -80,6 +89,7 @@
         </a>
     </div>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
+    <script type="module" src="./main.js"></script>
 </body>
 </html>

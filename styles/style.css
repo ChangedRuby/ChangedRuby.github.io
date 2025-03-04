@@ -5,6 +5,15 @@
   text-decoration: none;
 }
 
+canvas {
+  top: 0;
+  left: 0;
+}
+
+main {
+  position: absolute;
+}
+
 button {
   background-color: blue;
 }
@@ -15,6 +24,7 @@ header {
   background-color: black;
   width: 100%;
   height: 100px;
+  position: relative;
 }
 
 .mobile_header {
@@ -92,6 +102,39 @@ header {
   background-color: hsl(0, 0%, 20%);
 }
 
+.projects-header {
+  width: 100%;
+  height: 100px;
+  margin-top: 75px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.projects-header::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  padding: 5px 0px 5px 0px;
+  position: absolute;
+  z-index: -1;
+  filter: blur(10px);
+  background-color: black;
+}
+
+#canvas-container {
+  width: 100%;
+  height: 100%;
+  cursor: move;
+  float: right;
+  display: block;
+  overflow: hidden;
+}
+
+/* Projects */
 .projects {
   width: 100%;
   height: 100%;
@@ -113,7 +156,7 @@ header {
   background-color: black;
   width: 70%;
   height: auto;
-  margin: 50px 0px;
+  margin: 75px 0px;
   border-radius: 15px;
   cursor: pointer;
 
@@ -250,6 +293,10 @@ header {
     margin-bottom: 20px;
   }
 
+  .inner_description h1 {
+    font-size: 30px;
+  }
+
   .inner_title {
     width: 100%;
     height: 250px;
@@ -308,6 +355,8 @@ header {
     background-color: rgba(0, 0, 0, 1);
     border: none;
     color: white;
+    cursor: pointer;
+    transition: background-color 0.15s;
   }
 
   .close_sidebar_container img {
@@ -395,6 +444,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: background-color 0.15s;
   }
 
   .tab_toggle img {
@@ -402,8 +453,32 @@ header {
     object-fit: contain;
   }
 
+  .projects-header {
+    margin-top: 175px;
+  }
+
   .projects {
-    margin-top: 150px;
+    margin-top: 50px;
+  }
+  
+  .tab_toggle button:hover {
+    transition: 0.15s;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .close_sidebar_container button:hover {
+    transition: 0.15s;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .tab_toggle button:active {
+    transition: 0.15s;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .close_sidebar_container button:active {
+    transition: 0.15s;
+    background-color: rgba(255, 255, 255, 0.2);
   }
 }
 

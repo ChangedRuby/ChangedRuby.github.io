@@ -1,4 +1,9 @@
 {
+  "name": "ChangedRuby.github.io",
+  "homepage": "https://changedruby.github.io/",
+  "version": "0.0.0",
+  "type": "module",
+  
   "devDependencies": {
     "vite": "^6.2.0"
   },

@@ -33,9 +33,6 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup Node
         uses: actions/setup-node@v4
-        with:
-          node-version: '22.14.0'  # Or the version you're using locally.  Check with `node -v`
-          cache: 'npm' # Caches dependencies to speed up future builds.
       - name: Install dependencies
         run: npm install
       - name: Build app

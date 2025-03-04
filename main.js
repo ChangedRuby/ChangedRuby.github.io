@@ -6,17 +6,14 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import WebGL from 'three/addons/capabilities/WebGL.js';
 
-const container = document.querySelector('#canvas-container');
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#bg'),
-  alpha: true,
 });
 
 renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(container.clientWidth, container.clientHeight);
-container.appendChild(renderer.domElement);
+renderer.setSize(window.clientWidth, window.clientHeight);
 camera.position.setY(5);
 camera.position.setZ(30);
 
@@ -55,8 +52,7 @@ function animate(){
 
 // resize renderer to maintain square shape
 function onWindowResize(){
-    const size = Math.min(container.clientWidth, container.clientHeight);
-    camera.aspect = 1; // keeps square aspect ratio
+    const size = Math.min(window.clientWidth, window.clientHeight);
     camera.updateProjectionMatrix();
     renderer.setSize(size, size);
 }

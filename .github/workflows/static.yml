@@ -37,6 +37,8 @@ jobs:
         run: npm install
       - name: Build app
         run: npm run build
+        env:
+          PATH: ./node_modules/.bin:$PATH
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact

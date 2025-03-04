@@ -22,6 +22,5 @@
 
 node_modules
 dist
-dist-ssr
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode

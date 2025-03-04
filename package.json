@@ -1,14 +1,13 @@
 {
-  "name": "ChangedRuby.github.io",
+  "name": "changedruby.github.io",
   "homepage": "https://changedruby.github.io/",
   "version": "0.0.0",
   "type": "module",
-  
+
   "devDependencies": {
     "vite": "^6.2.0"
   },
   "dependencies": {
-    "gh-pages": "^6.3.0",
     "three": "^0.174.0"
   },
   "scripts": {

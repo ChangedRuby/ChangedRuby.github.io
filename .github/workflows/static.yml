@@ -37,6 +37,8 @@ jobs:
           node-version: '22.14.0'
       - name: Install dependencies
         run: npm install
+      - name: Grant execute permission for vite
+        run: chmod +x ./node_modules/.bin/vite
       - name: Build app
         run: npm run build
         env:

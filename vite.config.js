@@ -2,5 +2,5 @@
  * @type {import('vite').UserConfig}
  */
 export default {
-    base: process.env.NODE_ENV === 'production' ? '/ChangedRuby.github.io/' : ''
+    base: process.env.NODE_ENV === 'production' ? '' : ''
 }

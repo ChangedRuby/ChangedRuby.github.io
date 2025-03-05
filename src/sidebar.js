@@ -11,7 +11,3 @@ document.querySelector('.tab_toggle').addEventListener('click', () => {
 document.querySelector('.close_sidebar_container').addEventListener('click', () => {
     sidebarClose();
 });
-
-/*
-    start of three.js part
-*/

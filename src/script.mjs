@@ -16,17 +16,17 @@ animated.addEventListener('animationend', (e) => {
     }
 });
 
-function handleEvent(event){
+export function handleEvent(event){
     console.log('Event type:', event.animationName);
 }
 
-function sidebarOpen(){
+export function sidebarOpen(){
     sidebar.style.display = 'block';
     sidebar.classList.add('sidebar_open');
     sidebar.classList.remove('sidebar_close');
 }
 
-function sidebarClose(){
+export function sidebarClose(){
     sidebar_icon.style.display = 'block';
     sidebar.classList.add('sidebar_close');
     sidebar.classList.remove('sidebar_open');

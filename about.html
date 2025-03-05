@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About</title>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" href="src/styles/style.css">
+    <link rel="stylesheet" href="src/styles/about.css">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body style="background-color: rgb(25, 129, 95);">
@@ -16,7 +16,7 @@
             </div>
 
             <div class="close_sidebar_container">
-                <button onclick="sidebarClose()"><img src="images/close-icon.png"></button>
+                <button><img src="images/close-icon.png"></button>
             </div>
 
             <ul class="navigation">
@@ -35,7 +35,7 @@
             </div>
 
             <div class="tab_toggle">
-                <button onclick="sidebarOpen()"><img src="images/sidebar-icon.png" id="sidebar-icon"></button>
+                <button><img src="images/sidebar-icon.png" id="sidebar-icon"></button>
             </div>
         </div>
     </header>
@@ -47,6 +47,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script type="module" src="/src/sidebar.js"></script>
 </body>
 </html>

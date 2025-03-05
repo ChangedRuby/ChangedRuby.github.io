@@ -69,6 +69,7 @@ scene.add(ambientLight, pointLight);
 const controls = new OrbitControls(camera, renderer.domElement);
 controls.enableDamping = true;
 controls.dampingFactor = 0.1;
+controls.rotateSpeed = 0.1;
 controls.enablePan = false;
 
 const startDate = Date.now();

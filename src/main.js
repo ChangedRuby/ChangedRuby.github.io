@@ -78,13 +78,14 @@ function init(){
     // Setup controls
     controls = new OrbitControls(cameraT, renderer.domElement);
     controlsBg = new OrbitControls(cameraBg, renderer.domElement);
-    controls.enableDamping = true;
-    controls.dampingFactor = 0.1;
-    controls.rotateSpeed = 0.1;
+    controls.enableRotate = false;
     controls.enablePan = false;
     controls.enableZoom = false;
 
-    controlsBg.enableRotate = false;
+    controlsBg.enableRotate = true;
+    controlsBg.enableDamping = true;
+    controlsBg.dampingFactor = 0.01;
+    controlsBg.rotateSpeed = 0.1;
     controlsBg.enablePan = false;
     controlsBg.enableZoom = false;
     controlsBg.autoRotate = true;
@@ -128,6 +129,9 @@ function initPostProcessing(){
 function initMesh(){
     const fontLoader = new FontLoader();
     var text;
+
+    //const gridHelper = new THREE.GridHelper(200, 50);
+    //scene.add(gridHelper);
 
     // Changes the text depending on the page
     if(window.location.pathname == '/index.html' || window.location.pathname == '/'){
@@ -191,9 +195,6 @@ function initStar(){
     sceneBg.add(star);
 }
 
-//const gridHelper = new THREE.GridHelper(200, 50);
-//scene.add(gridHelper);
-
 function animate(){
     // Sets time to current date in milliseconds
     var time = Date.now();
@@ -235,5 +236,7 @@ function onWindowResize(){
     // resizes renderer to maintain square shape
     cameraT.aspect = window.innerWidth / window.innerHeight; // keeps square aspect ratio if 1
     cameraT.updateProjectionMatrix();
+    cameraBg.aspect = window.innerWidth / window.innerHeight; // keeps square aspect ratio if 1
+    cameraBg.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
 }

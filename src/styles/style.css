@@ -171,20 +171,33 @@ header {
 }
 
 /* outline */
-.content_bar::after {
+.content_bar::after, .content_bar::before {
   content: "";
   background-image: conic-gradient(from var(--angle), blue, green, yellow, rgb(255, 0, 242), blue);
   width: 100%;
   height: 100%;
-  position: absolute;
-  z-index: -1;
   border-radius: 15px;
-  opacity: 0;
+  transition: opacity 0.5s;
   animation: rotate 5s linear infinite;
-  filter: blur(20px);
+  position: absolute;
 }
 
+.content_bar::after {
+  z-index: -1;
+  opacity: 0;
+  filter: blur(15px);
+  padding: 15px 15px;
+  top: -15px;
+  transition: opacity 0.5s;
+}
+
+.content_bar::before {
+  z-index: -1;
+  padding: 2px 2px;
+  top: -2px;
+}
 /* box-shadow */
+/*
 .content_bar::before {
   content: "";
   width: 100%;
@@ -195,6 +208,7 @@ header {
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.5);
   transition: opacity 0.5s;
 }
+  */
 
 .inner_description, .inner_title {
   z-index: 2;
@@ -306,8 +320,11 @@ header {
 
   .inner_description {
     width: 90%;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    border-radius: 15px 15px 0px 0px;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 
   .inner_description h1 {
@@ -322,6 +339,10 @@ header {
   .inner_description {
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+
+  .reverse .inner_description {
+    border-radius: 0px 0px 15px 15px;
   }
   
   .reverse .inner_title {

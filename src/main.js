@@ -49,7 +49,6 @@ function init(){
 
     // Move cameras
     cameraT.position.setY(0);
-    cameraT.position.setZ(15);
     cameraBg.position.setZ(15);
     onWindowResize();
 
@@ -202,6 +201,12 @@ function animate(){
     // Animates the mesh only when loaded
     if(textMesh != undefined){
         textMesh.rotation.y = Math.sin(time / 1000) * 0.4;
+    }
+    
+    if(screen.width < 800){
+        cameraT.position.setZ(40 - (screen.width / 32));
+    } else{
+        cameraT.position.setZ(15);
     }
     
     controls.update();

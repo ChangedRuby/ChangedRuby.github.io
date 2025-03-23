@@ -157,10 +157,11 @@ header {
   display: flex;
   align-items: stretch;
   justify-content: center;
+  flex-direction: row;
   background-color: none;
   width: 70%;
   height: auto;
-  margin: 75px 0px;
+  margin: 100px 0px;
   border-radius: 15px;
   background-color: black;
   cursor: pointer;
@@ -211,6 +212,11 @@ header {
   */
 
 .inner_description, .inner_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px 0px;
   z-index: 2;
 }
 
@@ -259,16 +265,11 @@ header {
   text-align: center;
   font-family: Arial, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: white;
+  padding-left: 5%;
+  padding-right: 5%;
   font-size: 40px;
   font-weight: bold;
   margin-bottom: 10px;
-}
-
-.inner_description, .inner_title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
 }
 
 .inner_description {
@@ -283,6 +284,10 @@ header {
   position: relative;
   width: 40%;
   height: 300px;
+}
+
+.content_bar.reverse {
+  flex-direction: row-reverse;
 }
 
 .reverse .inner_description {
@@ -303,10 +308,14 @@ header {
 }
 
 /* Mobile navigation */
-@media (max-width: 800px) {
+@media (max-width: 890px) {
   .content_bar {
     align-items: center;
     flex-direction: column;
+  }
+
+  .content_bar.reverse {
+    flex-direction: column-reverse;
   }
 
   .inner_description p {
